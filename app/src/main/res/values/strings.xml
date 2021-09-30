@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MusicSearch</string>
+    <string name="recherche_de_titre_artiste">Recherche de contenu ...</string>
+    <string name="aucun_r_sultat_trouv">Aucun résultat trouvé ...</string>
+    <item name="snackbar_text" type="id"/>
+
+    <string-array name="Media">
+        <item>movie</item>
+        <item>podcast</item>
+        <item>music</item>
+        <item>musicVideo</item>
+        <item>audiobook</item>
+        <item>shortFilm</item>
+        <item>tvShow</item>
+        <item>software</item>
+        <item>ebook</item>
+        <item>all</item>
+    </string-array>
+</resources>

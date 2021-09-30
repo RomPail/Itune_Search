@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fr.cl.musicsearch.search.SearchView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rib_search"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top|center"
+        >
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:ems="10"
+            android:focusable="true"
+            android:inputType="text"
+            android:focusableInTouchMode="true"
+            android:hint="@string/recherche_de_titre_artiste"
+            android:textColor="@color/black"
+            android:textColorHint="@color/cardview_dark_background"
+            android:maxLines="1"
+            android:textStyle="normal"
+            android:imeOptions="actionSearch"
+            />
+
+        <Spinner
+            android:id="@+id/spinner_media"
+            style="@style/Widget.AppCompat.DropDownItem.Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_empty_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="visible">
+            <TextView
+                android:id="@+id/emptyMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginVertical="200dp"
+                android:text="@string/aucun_r_sultat_trouv"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <RelativeLayout
+            android:id="@+id/relative_loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/progress_circular_search_rib"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:indeterminateOnly="true"
+                android:visibility="visible"
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</fr.cl.musicsearch.search.SearchView>
